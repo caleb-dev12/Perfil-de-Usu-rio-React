@@ -1,0 +1,133 @@
+body {
+  width: 70%;
+}
+
+.containerUser {
+  margin: 0 auto;
+  background: #222;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 1, 1.2);
+}
+
+.userProfile {
+  padding: 2rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#userImage {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.userInfos h2 {
+  font-size: 2rem;
+}
+
+.userInfos p {
+  font-size: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  padding-top: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  line-height: 1rem;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+}
+
+.form-group input {
+  background-color: #333;
+  color: #eee;
+  font-weight: 500;
+  font-size: 1.2rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem;
+}
+
+.form-group textarea {
+  background-color: #333;
+  color: #eee;
+  font-weight: 500;
+  font-size: 1.2rem;
+  height: 5rem;
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem;
+  resize: none;
+}
+
+.btn {
+  margin: 1rem 1rem 1rem 0;
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background-color: #30b997;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: #238b71;
+}
+
+@media (max-width: 780px) {
+  .containerUser {
+    width: 100%;
+  }
+  
+  .userProfile {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #userImage {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .userInfos {
+    line-height: 2.5rem;
+  }
+
+  .userInfos h2 {
+    font-size: 1.2rem;
+  }
+
+  .userInfos p {
+    font-size: 1.2rem;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .button {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1100px) {
+  .form-group {
+    width: 100%;
+  }
+} 
