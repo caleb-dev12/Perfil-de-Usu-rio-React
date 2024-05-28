@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import './UserInfo.css';
+import React, { useState } from "react";
+import "./UserInfo.css";
 
 const UserInfo = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [age, setAge] = useState();
-  const [email, setEmail] = useState('');
-  const [bio, setBio] = useState('');
+  const [email, setEmail] = useState("");
+  const [bio, setBio] = useState("");
   const [submittedData, setSubmittedData] = useState(null);
 
   const handleSubmit = (e) => {
@@ -16,29 +16,36 @@ const UserInfo = () => {
       name,
       age,
       email,
-      bio
+      bio,
     };
 
+    // atribuindo o valor das informações do perfil para userData, com todos os valores dos inputs já resgatados
     setSubmittedData(userData);
   };
 
   const handleDelete = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    setName('')
-    setAge(NaN)
-    setEmail('')
-    setBio('')
+    // valores
+    setName("");
+    setAge(NaN);
+    setEmail("");
+    setBio("");
 
-    setSubmittedData(null)
-  }
+    // limpando os valores adicionados ao perfil do user
+    setSubmittedData(null);
+  };
 
   return (
     <div>
-      <div className='containerUser'>
-        <div className='userProfile'>
-          <img src='https://github.com/caleb-dev12.png' alt='Caleb Freires' id='userImage' />
-          <div className='userInfos'>
+      <div className="containerUser">
+        <div className="userProfile">
+          <img
+            src="https://github.com/calebfreires.png"
+            alt="Caleb Freires"
+            id="userImage"
+          />
+          <div className="userInfos">
             {submittedData ? (
               <>
                 <h2>Nome do Usuário: {submittedData.name}</h2>
@@ -57,52 +64,52 @@ const UserInfo = () => {
           </div>
         </div>
       </div>
-      <form onSubmit={handleSubmit} className='form'>
-        <div className='form-group'>
-          <label htmlFor='name'>Nome: </label>
+      <form onSubmit={handleSubmit} className="form">
+        <div className="form-group">
+          <label htmlFor="name">Nome: </label>
           <input
-            type='text'
-            id='name'
-            className='form-control'
-            name='name'
+            type="text"
+            id="name"
+            className="form-control"
+            name="name"
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
 
-        <div className='form-group'>
-          <label htmlFor='age'>Idade: </label>
+        <div className="form-group">
+          <label htmlFor="age">Idade: </label>
           <input
-            type='number'
-            id='age'
-            className='form-control'
-            name='age'
+            type="number"
+            id="age"
+            className="form-control"
+            name="age"
             required
             value={age}
             onChange={(e) => setAge(e.target.value)}
           />
         </div>
 
-        <div className='form-group'>
-          <label htmlFor='email'>Email: </label>
+        <div className="form-group">
+          <label htmlFor="email">Email: </label>
           <input
-            type='email'
-            id='email'
-            className='form-control'
-            name='email'
+            type="email"
+            id="email"
+            className="form-control"
+            name="email"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
 
-        <div className='form-group'>
-          <label htmlFor='bio'>Biografia: </label>
+        <div className="form-group">
+          <label htmlFor="bio">Biografia: </label>
           <textarea
-            id='bio'
-            className='form-control'
-            name='bio'
+            id="bio"
+            className="form-control"
+            name="bio"
             required
             value={bio}
             onChange={(e) => setBio(e.target.value)}
@@ -110,12 +117,12 @@ const UserInfo = () => {
         </div>
 
         <div className="button">
-        <button type='submit' className='btn update'>
-          Atualizar
-        </button>
-        <button onClick={handleDelete} type='reset' className='btn delete'>
-          Apagar
-        </button>
+          <button type="submit" className="btn update">
+            Atualizar
+          </button>
+          <button onClick={handleDelete} type="reset" className="btn delete">
+            Apagar
+          </button>
         </div>
       </form>
     </div>
